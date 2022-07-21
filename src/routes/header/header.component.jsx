@@ -1,5 +1,9 @@
-import { Link, Outlet } from 'react-router-dom'
+import { useContext } from 'react';
+import { UserContext } from '../../context/user.context';
 
+import { Link, useNavigate, Outlet } from 'react-router-dom'
+
+import { signOutUser } from '../../utils/firebase/firebase.utils'
 
 import CartIcon from '../../components/cart-icon/cart-icon.component'
 
@@ -11,14 +15,22 @@ import SearchIcon from '@mui/icons-material/Search';
 import './header.styles.css'
 
 const Header = () => {
-   
+    const { currentUser } = useContext(UserContext)
 
-    return(
+    const navigate = useNavigate();
+
+    const signOut = () => {
+        signOutUser()
+        navigate('/', {replace: true})
+    }
+
+
+    return (
         <>
             <header>
                 <Link to="/">
                     <div className="header__logoContainer">
-                        <StorefrontIcon 
+                        <StorefrontIcon
                             fontSize="large"
                             className="header__logo"
                         />
@@ -29,7 +41,7 @@ const Header = () => {
                 <div className="header__search">
                     <input type="search" className='header__searchInput' />
                     <button className='header__searchIconContainer'>
-                        <SearchIcon 
+                        <SearchIcon
                             fontSize="large"
                             className="header__searchIcon"
                         />
@@ -37,22 +49,35 @@ const Header = () => {
                 </div>
 
 
-                
+
                 <div className="nav">
-                
-                                
-                    <Link to='/authentication'>
-                        <div className="nav__item">
-                            <span className="nav__itemLineOne">
-                                Hello Guest
-                            </span>
-                            <span className="nav__itemLineTwo">
+                    {
+                        currentUser ?
+                            (
+                                <div className="nav__item nav__item-signOut" onClick={signOut}>
+                                    <span className="nav__itemLineOne">
+                                        Hello User
+                                    </span>
+                                    <span className="nav__itemLineTwo"
+                                    >
+                                        Sign Out
+                                    </span>
+                                </div>
+                            )
+                            : (
+                                <Link to='/authentication'>
+                                    <div className="nav__item">
+                                        <span className="nav__itemLineOne">
+                                            Hello Guest
+                                        </span>
+                                        <span className="nav__itemLineTwo">
                                             Sign In
-                            </span>
-                        </div>
-                    </Link>
- 
-                
+                                        </span>
+                                    </div>
+                                </Link>
+                            )
+                    }
+
 
                     <div className="nav__item">
                         <span className="nav__itemLineOne">
@@ -66,7 +91,7 @@ const Header = () => {
                     <Link to="/checkout">
                         <CartIcon />
                     </Link>
-                    
+
                 </div>
 
             </header>

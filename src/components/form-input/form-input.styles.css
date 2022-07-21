@@ -1,0 +1,16 @@
+.input-container {
+    display: grid;
+    row-gap: .3rem;
+}
+
+.input-container__label {
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.input-container__input {
+    padding: .6rem 0;
+    font-size: 1.8rem;
+}
+
+

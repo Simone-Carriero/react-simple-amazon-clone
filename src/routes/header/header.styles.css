@@ -74,7 +74,9 @@ header {
     flex-direction: column;
 }
 
-
+.nav__item-signOut {
+    cursor: pointer;
+}
 
 .nav__itemLineOne {
     font-size: 1rem;
