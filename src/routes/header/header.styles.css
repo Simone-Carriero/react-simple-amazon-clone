@@ -1,0 +1,99 @@
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: .5rem 2rem;
+    background-color: #11171e;
+    color: #ffffff;
+    z-index: 2;
+}
+
+.header__logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header__logo {
+    color: #ff9f00
+}
+
+.header__logoTitle {
+    display: none;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.header__search {
+    display: flex;
+    flex: 1;
+    position: relative;
+}
+
+.header__searchInput {
+    padding: .5rem;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    outline-color: #ff9f00;
+}
+
+
+
+.header__searchIconContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 3.5rem;
+    background-color: #ff9f00;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.header__searchIcon {
+    color: #000000
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav__item {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.nav__itemLineOne {
+    font-size: 1rem;
+}
+
+.nav__itemLineTwo {
+    font-weight: bold;
+}
+
+
+
+
+@media only screen and (min-width: 600px) {
+    header {
+        gap: 3rem;
+        padding: .5rem 3rem;
+    }
+
+    .header__logoTitle {
+        display: block;
+    }
+}

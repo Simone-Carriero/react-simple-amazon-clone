@@ -1,10 +1,17 @@
-import React from 'react';
+import {
+  Routes,
+  Route
+} from 'react-router-dom'
 
-function App() {
+import Header from "./routes/header/header.component";
+
+
+const App = () => {
   return (
-    <>
-      
-    </>
+    <Routes>
+      <Route path='/' element={<Header />}>
+      </Route>
+    </Routes>
   );
 }
 
