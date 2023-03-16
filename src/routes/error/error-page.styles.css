@@ -1,0 +1,23 @@
+.error-page {
+  text-align: center;
+}
+
+.error-page h1 {
+  font-size: 8rem;
+}
+
+.link {
+  display: inline-block;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  background-color: black;
+  color: hsl(50, 100%, 54%);
+  transition: all 0.3s linear;
+}
+
+.link:hover {
+  border: 1px solid #000000;
+  color: #000000;
+  background-color: #ffffff;
+}

@@ -1,0 +1,18 @@
+.nav__item {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+.nav__item-signOut {
+  cursor: pointer;
+}
+
+.nav__itemLineTwo {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.nav__sign-out {
+  cursor: pointer;
+}

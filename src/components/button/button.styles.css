@@ -1,10 +1,11 @@
 button {
-    padding: 1rem 4rem;
-    border: none;
-    border: 1px solid #0000004b;
-    border-radius: 19px;
-    font-weight: bold;
-    color: #111;
-    background-color: #ff9f00;
-    cursor: pointer;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  color: hsl(51, 61%, 18%);
+  background-color: hsl(50, 100%, 54%);
+  display: inline-block;
+  font-size: 0.875rem;
+  cursor: pointer;
+  box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
+  border-color: transparent;
 }
