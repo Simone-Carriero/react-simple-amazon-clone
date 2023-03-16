@@ -1,23 +1,17 @@
-# Amazon clone
+# Simple Amazon Clone
 
-A small amazon clone project
+> Live demo [_here_](https://rainbow-melomakarona-8efa88.netlify.app/). <!-- If you have the project hosted somewhere, include the link here. -->
 
-## Tech Stack
+## General Information
 
-**Client:** React
+A basic e-commerce inspired by Amazon. As PWA can be downloaded on various devices and includes the ability to register and log in.
 
-## Roadmap
-    - [] Styled components
-    - [] Css improvements
-    
+## Technologies Used
 
+- Tech 1 - react 18.2.0
+- Tech 2 - firebase 9.9.0
+- Tech 3 - react-router-dom 6.3.0
 
-## Authors
+## Project Status
 
-- [@Simone-Carriero](https://www.github.com/Simone-Carriero)
-
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
+Project is: _in progress_
